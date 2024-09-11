@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/introduce.css">
+      <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-09b459cf485d4b1f3304947240314c05.css?vsn=d"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
+      >
+    <title>Introduce</title>
+</head>
+<body>
+    <div class="header">
+        <div id="db_logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="60" onclick="toggleAnimation()">
+            <path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 32a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm-96-32a96 96 0 1 0 192 0 96 96 0 1 0 -192 0zM96 240c0-35 17.5-71.1 45.2-98.8S205 96 240 96c8.8 0 16-7.2 16-16s-7.2-16-16-16c-45.4 0-89.2 22.3-121.5 54.5S64 194.6 64 240c0 8.8 7.2 16 16 16s16-7.2 16-16z" fill="black">
+              <animateTransform 
+                id="rotation"
+                attributeName="transform" 
+                type="rotate" 
+                from="0 256 256" 
+                to="360 256 256" 
+                dur="10s" 
+                repeatCount="indefinite"
+                begin="0s"/>
+            </path>
+            <line id="cross" x1="80" y1="80" x2="432" y2="432" stroke="black" stroke-width="30" visibility="hidden"/>
+            <line id="cross2" x1="432" y1="80" x2="80" y2="432" stroke="black" stroke-width="30" visibility="hidden"/>
+          
+            <script>
+              let isPaused = false;
+              let rotationStartTime;
+          
+              function toggleAnimation() {
+                const animation = document.getElementById('rotation');
+                const cross1 = document.getElementById('cross');
+                const cross2 = document.getElementById('cross2');
+                
+                if (isPaused) {
+                  const currentTime = new Date().getTime();
+                  const timeElapsed = (currentTime - rotationStartTime) / 1000;
+                  const newBeginValue = `${timeElapsed}s`;
+                  animation.setAttribute('begin', newBeginValue);
+                  animation.setAttribute('dur', '2s');
+                  animation.setAttribute('repeatCount', 'indefinite');
+                  
+                  // Ẩn dấu gạch chéo khi animation tiếp tục
+                  cross1.setAttribute('visibility', 'hidden');
+                  cross2.setAttribute('visibility', 'hidden');
+                } else {
+                  rotationStartTime = new Date().getTime();
+                  animation.setAttribute('dur', '0s');
+                  animation.setAttribute('repeatCount', '0');
+                  
+                  // Hiển thị dấu gạch chéo khi animation tạm dừng
+                  cross1.setAttribute('visibility', 'visible');
+                  cross2.setAttribute('visibility', 'visible');
+                }
+                isPaused = !isPaused;
+              }
+            </script>
+          </svg>
+        </div>
+        <nav id="header_nav_bar" data-text="Awesome">
+            <p class="nav_bar_item"><a href="homepage.html">&nbsp;Trang Chủ&nbsp;</a></p>
+            <p class="nav_bar_item"><a href="introduce.html" id="item-active">&nbsp;Giới Thiệu&nbsp;</a></p>
+            <p class="nav_bar_item"><a href="activities.html">&nbsp;Hoạt Động&nbsp;</a></p>
+            <p class="nav_bar_item"><a href="support.html">&nbsp;Hỗ Trợ&nbsp;</a></p>
+        </nav>
+        <div class="space">&nbsp;</div>
+    </div>
+  <div class="container" style="background-color: #fff; color: #000;">
+      <br><br>
+      <h1>PIX3L</h1>
+      <hr>
+      <div class="share-item-wrap">
+        <div><div class="item-wrap-fixed"><div><div><div><div><div>
+        <title>YouTube</title>
+        <path d="M60.042 31.82c0 0-0.4-2.819-1.629-4.058-1.558-1.629-3.299-1.637-4.098-1.733-5.719-0.415-14.307-0.415-14.307-0.415h-0.015c0 0-8.588 0-14.307 0.415-0.799 0.096-2.54 0.104-4.098 1.733-1.231 1.238-1.622 4.058-1.622 4.058s-0.408 3.308-0.408 6.622v3.099c0 3.307 0.408 6.622 0.408 6.622s0.4 2.819 1.622 4.058c1.558 1.629 3.603 1.574 4.513 1.75 3.276 0.312 13.907 0.408 13.907 0.408s8.595-0.015 14.315-0.423c0.799-0.096 2.541-0.104 4.098-1.733 1.229-1.238 1.629-4.058 1.629-4.058s0.408-3.307 0.408-6.622v-3.099c-0.008-3.308-0.415-6.622-0.415-6.622zM35.775 45.304v-11.495l11.048 5.768-11.048 5.727z" fill="#000" class="icon-path-Youtube"></path>
+        </svg></div></div><div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.1em; padding: 0.5em; color: rgb(255, 255, 255);">Youtube</div></div></div><div class="me-media-icon-box bottom" style="width: 1em; margin: 0px 0.25em 0.1em;"><div class="me-media-icon-item media-icon-Instagram" ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="50" height="50" viewBox="0 0 80 80">
+        <title>Instagram</title>
+        <path d="M40.291 24.010c5.117 0 5.698 0 7.733 0.116 1.86 0.058 2.849 0.407 3.547 0.639 0.872 0.349 1.512 0.756 2.209 1.453s1.105 1.279 1.453 2.209c0.232 0.698 0.581 1.686 0.639 3.547 0.116 2.035 0.116 2.616 0.116 7.733s0 5.698-0.116 7.733c-0.058 1.86-0.407 2.849-0.639 3.547-0.349 0.872-0.756 1.512-1.453 2.209s-1.279 1.105-2.209 1.453c-0.698 0.232-1.686 0.581-3.547 0.639-2.035 0.116-2.616 0.116-7.733 0.116s-5.698 0-7.733-0.116c-1.86-0.058-2.849-0.407-3.547-0.639-0.872-0.349-1.512-0.756-2.209-1.453s-1.105-1.279-1.453-2.209c-0.232-0.698-0.581-1.686-0.639-3.547-0.116-2.035-0.116-2.616-0.116-7.733s0-5.698 0.116-7.733c0.058-1.86 0.407-2.849 0.639-3.547 0.349-0.872 0.756-1.512 1.453-2.209s1.279-1.105 2.209-1.453c0.698-0.232 1.686-0.581 3.547-0.639 2.035-0.058 2.616-0.116 7.733-0.116zM40.291 20.58c-5.175 0-5.814 0-7.85 0.116s-3.43 0.407-4.651 0.872c-1.279 0.465-2.326 1.163-3.372 2.209s-1.744 2.151-2.209 3.372c-0.465 1.221-0.814 2.616-0.872 4.651-0.116 2.035-0.116 2.675-0.116 7.907s0 5.814 0.116 7.85c0.116 2.035 0.407 3.43 0.872 4.651 0.465 1.279 1.163 2.326 2.209 3.372s2.151 1.744 3.372 2.209c1.221 0.465 2.616 0.814 4.651 0.872 2.035 0.116 2.675 0.116 7.85 0.116s5.814 0 7.85-0.116c2.035-0.116 3.43-0.407 4.651-0.872 1.279-0.465 2.326-1.163 3.372-2.209s1.744-2.151 2.209-3.372c0.465-1.221 0.814-2.616 0.872-4.651 0.116-2.035 0.116-2.675 0.116-7.85s0-5.814-0.116-7.85c-0.116-2.035-0.407-3.43-0.872-4.651-0.465-1.279-1.105-2.326-2.209-3.372-1.046-1.046-2.151-1.744-3.372-2.209s-2.616-0.814-4.651-0.872c-2.035-0.116-2.675-0.175-7.85-0.175 0 0 0 0 0 0zM40.291 29.883c-5.407 0-9.826 4.419-9.826 9.826s4.419 9.826 9.826 9.826 9.826-4.419 9.826-9.826-4.419-9.826-9.826-9.826zM40.291 46.047c-3.489 0-6.338-2.849-6.338-6.338s2.849-6.338 6.338-6.338 6.338 2.849 6.338 6.338-2.849 6.338-6.338 6.338zM52.792 29.476c0 1.279-1.046 2.268-2.268 2.268s-2.268-1.046-2.268-2.268 0.988-2.268 2.209-2.268 2.326 1.046 2.326 2.268z" fill="#000" class="icon-path-Instagram"></path>
+        </svg></div></div></a> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.1em; padding: 0.5em; color: rgb(255, 255, 255);">Instagram</div></div></div><div class="me-media-icon-box bottom" style="width: 1em; margin: 0px 0.25em 0.1em;"><div class="me-media-icon-item media-icon-Facebook"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="50" height="50" viewBox="0 0 80 80">
+        <title>Facebook</title>
+        <path d="M44.278 26.336h6.577v-7.854h-6.577c-5.044 0-9.194 4.086-9.194 9.194v3.959h-5.236v7.854h5.236v20.943h7.854v-21.007h6.577l1.341-7.854h-7.917v-3.959c0-0.702 0.575-1.277 1.341-1.277z" fill="#000" class="icon-path-Facebook"></path>
+        </svg></div></div></a> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.1em; padding: 0.5em; color: rgb(255, 255, 255);">Facebook</div></div></div><div class="me-media-icon-box bottom" style="width: 1em; margin: 0px 0.25em 0.1em;"><div class="me-media-icon-item media-icon-TikTok"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="50" height="50" viewBox="0 0 80 80">
+        <title>TikTok</title>
+        <path d="M56.397 36.63c-0.011 0-0.024 0-0.038 0-3.36 0-6.468-1.077-8.998-2.906l0.045 0.032v13.087c-0.003 6.571-5.331 11.898-11.903 11.898-6.574 0-11.903-5.328-11.903-11.903s5.328-11.903 11.903-11.903c0.577 0 1.144 0.040 1.697 0.12l-0.064-0.007v6.581c-0.49-0.16-1.054-0.252-1.639-0.252-3.018 0-5.464 2.446-5.464 5.464s2.446 5.464 5.464 5.464c3.018 0 5.464-2.446 5.464-5.464 0 0 0 0 0 0v0-25.583h6.443c0 0.022 0 0.047 0 0.073 0 0.548 0.049 1.084 0.144 1.605l-0.009-0.055c0.476 2.479 1.919 4.552 3.914 5.853l0.035 0.022c1.38 0.924 3.077 1.475 4.904 1.475 0 0 0.002 0 0.002 0v0z" fill="#000" class="icon-path-TikTok"></path>
+        </svg></div></a> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.1em; padding: 0.5em; color: rgb(255, 255, 255);">TikTok</div></div></div><div class="me-media-icon-box bottom" style="width: 1em; margin: 0px 0.25em 0.1em;"><div class="me-media-icon-item media-icon-Discord"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="50" height="50" viewBox="0 0 80 80">
+        <title>Discord</title>
+        <path d="M55.91 25.549c-3.028-1.405-6.199-2.378-9.442-2.919-0.433 0.793-0.864 1.621-1.225 2.451-3.459-0.54-7.027-0.54-10.488 0-0.36-0.83-0.757-1.658-1.225-2.451-3.279 0.54-6.451 1.55-9.478 2.919-5.946 8.865-7.568 17.479-6.776 25.984v0c3.495 2.595 7.424 4.542 11.605 5.839 0.937-1.261 1.767-2.595 2.487-4.001-1.37-0.504-2.667-1.117-3.929-1.874 0.324-0.253 0.65-0.47 0.973-0.721 7.351 3.459 15.858 3.459 23.172 0 0.324 0.253 0.648 0.504 0.973 0.721-1.261 0.721-2.558 1.37-3.929 1.874 0.721 1.405 1.55 2.739 2.487 4.001 4.181-1.261 8.108-3.244 11.605-5.803v0c0.937-9.911-1.621-18.453-6.811-26.020zM32.413 46.307c-2.271 0-4.145-2.054-4.145-4.577s1.802-4.577 4.109-4.577 4.181 2.054 4.145 4.577-1.838 4.577-4.109 4.577zM47.621 46.307c-2.271 0-4.109-2.054-4.109-4.577s1.802-4.577 4.109-4.577 4.145 2.054 4.109 4.577-1.802 4.577-4.109 4.577z" fill="#000" class="icon-path-Discord"></path>
+        </svg></div></div></a> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.1em; padding: 0.5em; color: rgb(255, 255, 255);">Discord</div></div></div><div class="me-media-icon-box bottom" style="width: 1em; margin: 0px 0.25em 0.1em;"><div class="me-media-icon-item media-icon-HoYoLAB"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="50" height="50" viewBox="0 0 80 80">
+        </svg></div></div></a>
+      </div>
+    </div>
+    <div class="margin">
+      <div class="" id="">
+        <div class="page1">
+          <div class="instro-content" style="color: #000;">
+            <span>
+              <p>Xin chào những con người tò mò!</p>
+              <p>
+                Chào mừng bạn đến với thế giới pixel! Trong những ô vuông nhỏ bé này, mỗi pixel đều đóng vai trò quan trọng trong việc tạo nên những hình ảnh và câu chuyện đầy màu sắc. Pixel không chỉ là yếu tố cơ bản trong đồ họa mà còn là nguồn cảm hứng cho hàng loạt tựa game độc đáo và nghệ thuật pixel lôi cuốn. Hãy cùng chúng tôi khám phá sự kỳ diệu của pixel, từ những hình ảnh giản dị nhưng đẹp mắt đến các trò chơi mang lại cảm giác hồi hộp và phấn khích. Chúng tôi hy vọng bạn sẽ cảm nhận được sự tinh tế và sáng tạo ẩn chứa trong từng pixel, và tìm thấy niềm vui trong từng khung hình nhỏ bé này.</p>
+              <hr>
+              <p style="font-size: 20px;">Cảm ơn vì đã tìm đến trang của chúng tôi!</p>
+            </span>
+          </div>
+          <div class="slider">
+            <div class="list">
+              <div class="item">
+                <img src="image/809bd13595a8bd05a9754830ded761fb.gif" alt="">
+              </div>
+              <div class="item">
+                <img src="image/94b21a17d8a954aee4e7228457d52729.gif" alt="">
+              </div>
+              <div class="item">
+                <img src="image/4d0432bb05c8def9fa01017aa50bfbcd.gif" alt="">
+              </div>
+              <div class="item">
+                <img src="image/08eba1de6100c1f367c847c512ba0ad4.gif" alt="">
+              </div>
+              <div class="item">
+                <img src="image/834cf38ce6a44974aad1d522f2194025.gif" alt="">
+              </div>
+            </div>
+            <div class="buttons">
+              <button id="prev"><</button>
+              <button id="next">></button>
+            </div>
+            <ul class="dots">
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        
+      </div>
+      <div class="aside">
+        <div class="leftside" id="">
+          <p>Pixel không chỉ là những mảng khối màu to mà còn là những mảng nhỏ tinh tế, <br> mỗi pixel là một phần của bức tranh lớn hơn, góp phần tạo nên hình ảnh và cảm xúc đặc biệt. <br> Trong thế giới đồ họa và game, từng pixel nhỏ bé đều đóng vai trò quan trọng, <br> từ việc xây dựng những chi tiết tinh xảo trong các tác phẩm nghệ thuật pixel đến việc tạo ra các cảnh quan và nhân vật sống động trong trò chơi. <br> Chúng ta hãy cùng khám phá cách mà những mảng pixel nhỏ bé này kết hợp để hình thành nên những trải nghiệm hình ảnh phong phú và đầy sắc thái, chứng minh rằng sự kỳ diệu thường nằm trong những chi tiết nhỏ nhất.</p>
+          <img src="image/pa7jt41g6mqa1.gif" alt="image1">
+        </div>
+        <div class="rightside" id="">
+          <p>Ngoài việc là yếu tố cơ bản trong thiết kế đồ họa, pixel còn mang đến một trải nghiệm kỳ lạ và độc đáo. Chính sự kết hợp của những mảng pixel nhỏ bé tạo nên một thế giới đầy sắc màu và chiều sâu, nơi mỗi chi tiết dù nhỏ nhất đều góp phần vào tổng thể. Pixel art không chỉ gợi nhớ đến thời kỳ hoài cổ của game retro mà còn khơi gợi sự sáng tạo và trí tưởng tượng của người xem.
+
+            Trong từng trò chơi và tác phẩm nghệ thuật pixel, bạn sẽ tìm thấy những hình ảnh không hoàn hảo nhưng lại vô cùng quyến rũ, mang đến một cảm giác ấm áp và thân thuộc. Sự đơn giản của pixel art thường khiến chúng ta cảm thấy gần gũi và dễ tiếp cận, đồng thời mở ra một không gian để khám phá những câu chuyện và cảm xúc theo cách rất riêng. Chúng ta sẽ cùng nhau trải nghiệm sự kỳ lạ và mê hoặc của thế giới pixel, nơi mỗi chi tiết nhỏ tạo nên một bức tranh lớn đầy màu sắc và cảm xúc.</p>
+          <img src="image/K51thZZ.gif" alt="image2" style="width: 30%;">
+        </div>
+      </div>
+      <hr>  
+      <div class="gamepixel" id="">
+        <div>
+          <div class="post-item" style="font-size: 20px;">
+            <p>Pixel không chỉ là đơn vị cơ bản tạo nên hình ảnh trên màn hình, mà còn là yếu tố quan trọng định hình trải nghiệm trong các tựa game. Trong thế giới trò chơi điện tử, pixel trở thành biểu tượng của sự sáng tạo không giới hạn, đặc biệt trong các tựa game retro hay pixel art. Những tựa game như <i>Super Mario Bros</i> , <i>The Legend of Zelda</i> hay <i>Undertale</i> đã tận dụng pixel để tạo nên những hình ảnh và thế giới độc đáo, tuy đơn giản nhưng mang đậm tính nghệ thuật và cảm xúc. Các nhà phát triển đã dùng pixel để kể những câu chuyện đầy mê hoặc, tạo nên những nhân vật và cảnh quan đáng nhớ, không chỉ thu hút người chơi bởi lối chơi mà còn bởi nét đẹp hoài cổ của đồ họa pixel.</p>
+            <img src="image/pixel-art-and-the-retro-game-revival-494200.webp" alt="image">
+            <div id="asfd">
+              <span>Blasphemous là một tựa game hành động phiêu lưu kết hợp với yếu tố platformer, được phát triển bởi The Game Kitchen và phát hành bởi Team17. Lấy cảm hứng từ nghệ thuật và văn hóa tôn giáo Tây Ban Nha, trò chơi nổi bật với đồ họa pixel art đen tối và phong cách gothic độc đáo.</span>
+              <span>Trong Blasphemous, người chơi vào vai The Penitent One, một chiến binh câm lặng mang trong mình tội lỗi sâu sắc, lang thang qua vùng đất Cvstodia đầy nguy hiểm và u ám. Trò chơi mang đến lối chơi đầy thử thách với hệ thống chiến đấu nhanh nhẹn và đòi hỏi kỹ năng, đồng thời khuyến khích người chơi khám phá sâu hơn vào cốt truyện bí ẩn, đậm chất huyền thoại và tôn giáo. Bầu không khí u ám, các hình ảnh kỳ dị, và câu chuyện đầy đau thương khiến Blasphemous trở thành một trải nghiệm độc đáo và ấn tượng trong thể loại game metroidvania.</span>
+            </div>
+          </div>
+          <div class="post-item" style="font-size: 20px;">
+            <img src="image/color-pixel-art-classic_16x9-cover.avif" alt="image">
+            <p>Color Pixel Art Classic là một tựa game giải trí nhẹ nhàng, tập trung vào việc tô màu bằng pixel. Trò chơi mang đến cho người chơi những bức tranh được chia thành các ô vuông nhỏ (pixel), và nhiệm vụ của bạn là tô màu các ô vuông này theo đúng số thứ tự, giúp hoàn thiện những tác phẩm nghệ thuật pixel rực rỡ.</p>
+            <div id="asfd">
+              <span>Với giao diện đơn giản và lối chơi dễ tiếp cận, Color Pixel Art Classic phù hợp với mọi lứa tuổi, mang đến cảm giác thư giãn và thú vị khi bạn dần thấy bức tranh hoàn thiện từng chút một. Tựa game này không chỉ giúp bạn thỏa mãn đam mê sáng tạo mà còn là một cách tuyệt vời để xả stress và tận hưởng những phút giây giải trí.</span>
+              <span></span>
+            </div>
+          </div>
+          <div class="post-item" style="font-size: 20px;">
+            <img src="https://i.ytimg.com/vi/I-X-uZcfoXo/hqdefault.jpg" alt="image">
+            <p>Soul Knight là một tựa game hành động roguelike đầy hấp dẫn, được phát triển bởi ChillyRoom. Trò chơi đưa người chơi vào vai những chiến binh dũng cảm, khám phá các ngục tối ngẫu nhiên, tiêu diệt quái vật, và thu thập vũ khí đa dạng để vượt qua thử thách.</p>
+            <div id="asfd">
+              <span>Với lối chơi nhanh, mượt mà và không khoan nhượng, Soul Knight kết hợp hài hòa giữa yếu tố bắn súng và nhập vai, mang đến những trận chiến đầy kịch tính. Trò chơi nổi bật với đồ họa pixel art đầy màu sắc và đa dạng, cùng với hệ thống vũ khí phong phú, mỗi lần chơi đều mang lại trải nghiệm mới mẻ và thú vị. Dù đơn giản nhưng Soul Knight lại cuốn hút người chơi bởi sự đa dạng trong cách tiếp cận, tính thử thách cao, và cảm giác chinh phục mỗi khi vượt qua được các màn chơi đầy khó khăn.</span>
+              <span></span>
+            </div>
+          </div>
+          <div class="post-item" style="font-size: 20px;">
+            <img src="image/game-pixel-01.jpg" alt="image">
+            <p>Stardew Valley là một tựa game mô phỏng nông trại và cuộc sống, được phát triển bởi ConcernedApe. Trong trò chơi, bạn vào vai một nhân vật thừa kế một trang trại cũ ở thị trấn nhỏ Pelican Town. Bắt đầu từ những mảnh đất hoang sơ, người chơi sẽ trồng trọt, chăn nuôi, khai thác khoáng sản, câu cá, và tham gia vào các hoạt động khác để xây dựng một cuộc sống mới.</p>
+            <div id="asfd">
+              <span>Stardew Valley không chỉ thu hút người chơi bởi lối chơi nông trại đầy thú vị mà còn bởi hệ thống nhân vật phong phú và cốt truyện sâu sắc. Bạn có thể kết bạn, xây dựng mối quan hệ, thậm chí kết hôn với các cư dân trong thị trấn, mỗi người đều có câu chuyện riêng và tính cách độc đáo. Với đồ họa pixel art đầy màu sắc và âm nhạc dịu dàng, Stardew Valley mang đến một trải nghiệm thư giãn, giúp người chơi tạm quên đi cuộc sống bận rộn và tận hưởng niềm vui giản dị từ việc chăm sóc trang trại và hòa mình vào cộng đồng.</span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div style="font-size: 20px;">
+          <h2 style="text-decoration: underline;">KẾT LUẬN</h2>
+          <p>pixel không chỉ là những đơn vị hình ảnh nhỏ bé, mà còn là nền tảng của sự sáng tạo và cảm xúc trong thế giới đồ họa và trò chơi. Từ những mảng pixel nhỏ xíu đến những tác phẩm nghệ thuật pixel lôi cuốn, chúng tạo ra một trải nghiệm đặc biệt và đầy sức hút. Chính sự đơn giản và tinh tế của pixel art mang lại cảm giác gần gũi và thân thuộc, đồng thời khơi gợi trí tưởng tượng và khám phá. Dù là trong các tựa game retro hay các tác phẩm nghệ thuật hiện đại, pixel luôn chứng tỏ rằng sự kỳ diệu thường nằm trong những chi tiết nhỏ bé. Hãy tiếp tục khám phá và cảm nhận vẻ đẹp ẩn chứa trong từng pixel, nơi mỗi phần tử đóng góp vào một tổng thể đầy màu sắc và ý nghĩa.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer" style="background-color: #003A4D;"> 
+    <div class="footerlink1">
+      <a href="index.html" id="footer-logoback" style="font-size: 25px; margin-top: -15px;"><h4 style="color: #ffffff;">PIX<span id="purple">3L</span></h4></a>
+      <a href="#" id="footerlink-item-trans">PLUS+</a>
+      <a href="#" id="footerlink-item-trans">AD-FREE</a>
+      <a href="#" id="footerlink-item-trans">NEWSLETTER</a>
+      <a href="#" id="footerlink-item-trans">Liên Hệ</a>
+    </div>
+    <div class="allfooterlinks">
+      <div class="footerlink2">
+        <h4>Giới Thiệu</h4>
+        <a href="#">Trang Web</a>
+      </div>
+      <div class="footerlink2">
+        <h4>Hoạt Động</h4>
+        <a href="#">Sự Kiện</a>
+        <a href="#">Cập Nhật</a>
+        <a href="#">Workshop</a>
+      </div>
+      <div class="footerlink2">
+        <h4>Hỗ Trợ</h4>
+        <a href="#">Câu Hỏi</a>
+        <a href="#">Hướng dẫn</a>
+        <a href="#">Lỗi</a>
+      </div>
+    </div>
+    <div class="copyright" style="color: #fff;">
+      <span>Copyright</span>
+      <i class="fa-thin fa-copyright"></i>
+      <span>2024 Pix3l. All rights reserved.</span>
+      <a href="#">Terms and Conditions |</a>
+      <a href="#">Credits |</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+    <script src="js/introduce.js"></script>
+</body>
+</html>

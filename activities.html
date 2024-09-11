@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/activities.css">
+      <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-09b459cf485d4b1f3304947240314c05.css?vsn=d"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
+      >
+    <title>Activities</title>
+</head>
+<body>
+    <div class="header">
+        <div id="db_logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="60" onclick="toggleAnimation()">
+            <path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 32a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm-96-32a96 96 0 1 0 192 0 96 96 0 1 0 -192 0zM96 240c0-35 17.5-71.1 45.2-98.8S205 96 240 96c8.8 0 16-7.2 16-16s-7.2-16-16-16c-45.4 0-89.2 22.3-121.5 54.5S64 194.6 64 240c0 8.8 7.2 16 16 16s16-7.2 16-16z" fill="black">
+              <animateTransform 
+                id="rotation"
+                attributeName="transform" 
+                type="rotate" 
+                from="0 256 256" 
+                to="360 256 256" 
+                dur="10s" 
+                repeatCount="indefinite"
+                begin="0s"/>
+            </path>
+            <line id="cross" x1="80" y1="80" x2="432" y2="432" stroke="black" stroke-width="30" visibility="hidden"/>
+            <line id="cross2" x1="432" y1="80" x2="80" y2="432" stroke="black" stroke-width="30" visibility="hidden"/>
+          
+            <script>
+              let isPaused = false;
+              let rotationStartTime;
+          
+              function toggleAnimation() {
+                const animation = document.getElementById('rotation');
+                const cross1 = document.getElementById('cross');
+                const cross2 = document.getElementById('cross2');
+                
+                if (isPaused) {
+                  const currentTime = new Date().getTime();
+                  const timeElapsed = (currentTime - rotationStartTime) / 1000;
+                  const newBeginValue = `${timeElapsed}s`;
+                  animation.setAttribute('begin', newBeginValue);
+                  animation.setAttribute('dur', '2s');
+                  animation.setAttribute('repeatCount', 'indefinite');
+                  
+                  // Ẩn dấu gạch chéo khi animation tiếp tục
+                  cross1.setAttribute('visibility', 'hidden');
+                  cross2.setAttribute('visibility', 'hidden');
+                } else {
+                  rotationStartTime = new Date().getTime();
+                  animation.setAttribute('dur', '0s');
+                  animation.setAttribute('repeatCount', '0');
+                  
+                  // Hiển thị dấu gạch chéo khi animation tạm dừng
+                  cross1.setAttribute('visibility', 'visible');
+                  cross2.setAttribute('visibility', 'visible');
+                }
+                isPaused = !isPaused;
+              }
+            </script>
+          </svg>
+        </div>
+        <nav id="header_nav_bar" data-text="Awesome">
+            <p class="nav_bar_item"><a href="homepage.html">&nbsp;Trang Chủ&nbsp;</a></p>
+            <p class="nav_bar_item"><a href="introduce.html">&nbsp;Giới Thiệu&nbsp;</a></p>
+            <p class="nav_bar_item"><a href="activities.html" id="item-active">&nbsp;Hoạt Động&nbsp;</a></p>
+            <p class="nav_bar_item"><a href="support.html">&nbsp;Hỗ Trợ&nbsp;</a></p>
+        </nav>
+        <div class="space">&nbsp;</div>
+    </div>
+  <div class="container" style="background-color: #fff; color: #000;">
+      <br><br>
+      <h1>HOẠT ĐỘNG</h1>
+      <hr>
+      <div class="share-item-wrap">
+        <div><div class="item-wrap-fixed"><div><div><div><div><div>
+        <title>YouTube</title>
+        <path d="M60.042 31.82c0 0-0.4-2.819-1.629-4.058-1.558-1.629-3.299-1.637-4.098-1.733-5.719-0.415-14.307-0.415-14.307-0.415h-0.015c0 0-8.588 0-14.307 0.415-0.799 0.096-2.54 0.104-4.098 1.733-1.231 1.238-1.622 4.058-1.622 4.058s-0.408 3.308-0.408 6.622v3.099c0 3.307 0.408 6.622 0.408 6.622s0.4 2.819 1.622 4.058c1.558 1.629 3.603 1.574 4.513 1.75 3.276 0.312 13.907 0.408 13.907 0.408s8.595-0.015 14.315-0.423c0.799-0.096 2.541-0.104 4.098-1.733 1.229-1.238 1.629-4.058 1.629-4.058s0.408-3.307 0.408-6.622v-3.099c-0.008-3.308-0.415-6.622-0.415-6.622zM35.775 45.304v-11.495l11.048 5.768-11.048 5.727z" fill="#000" class="icon-path-Youtube"></path>
+        </svg></div></div><div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.1em; padding: 0.5em; color: rgb(255, 255, 255);">Youtube</div></div></div><div class="me-media-icon-box bottom" style="width: 1em; margin: 0px 0.25em 0.1em;"><div class="me-media-icon-item media-icon-Instagram" ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="50" height="50" viewBox="0 0 80 80">
+        <title>Instagram</title>
+        <path d="M40.291 24.010c5.117 0 5.698 0 7.733 0.116 1.86 0.058 2.849 0.407 3.547 0.639 0.872 0.349 1.512 0.756 2.209 1.453s1.105 1.279 1.453 2.209c0.232 0.698 0.581 1.686 0.639 3.547 0.116 2.035 0.116 2.616 0.116 7.733s0 5.698-0.116 7.733c-0.058 1.86-0.407 2.849-0.639 3.547-0.349 0.872-0.756 1.512-1.453 2.209s-1.279 1.105-2.209 1.453c-0.698 0.232-1.686 0.581-3.547 0.639-2.035 0.116-2.616 0.116-7.733 0.116s-5.698 0-7.733-0.116c-1.86-0.058-2.849-0.407-3.547-0.639-0.872-0.349-1.512-0.756-2.209-1.453s-1.105-1.279-1.453-2.209c-0.232-0.698-0.581-1.686-0.639-3.547-0.116-2.035-0.116-2.616-0.116-7.733s0-5.698 0.116-7.733c0.058-1.86 0.407-2.849 0.639-3.547 0.349-0.872 0.756-1.512 1.453-2.209s1.279-1.105 2.209-1.453c0.698-0.232 1.686-0.581 3.547-0.639 2.035-0.058 2.616-0.116 7.733-0.116zM40.291 20.58c-5.175 0-5.814 0-7.85 0.116s-3.43 0.407-4.651 0.872c-1.279 0.465-2.326 1.163-3.372 2.209s-1.744 2.151-2.209 3.372c-0.465 1.221-0.814 2.616-0.872 4.651-0.116 2.035-0.116 2.675-0.116 7.907s0 5.814 0.116 7.85c0.116 2.035 0.407 3.43 0.872 4.651 0.465 1.279 1.163 2.326 2.209 3.372s2.151 1.744 3.372 2.209c1.221 0.465 2.616 0.814 4.651 0.872 2.035 0.116 2.675 0.116 7.85 0.116s5.814 0 7.85-0.116c2.035-0.116 3.43-0.407 4.651-0.872 1.279-0.465 2.326-1.163 3.372-2.209s1.744-2.151 2.209-3.372c0.465-1.221 0.814-2.616 0.872-4.651 0.116-2.035 0.116-2.675 0.116-7.85s0-5.814-0.116-7.85c-0.116-2.035-0.407-3.43-0.872-4.651-0.465-1.279-1.105-2.326-2.209-3.372-1.046-1.046-2.151-1.744-3.372-2.209s-2.616-0.814-4.651-0.872c-2.035-0.116-2.675-0.175-7.85-0.175 0 0 0 0 0 0zM40.291 29.883c-5.407 0-9.826 4.419-9.826 9.826s4.419 9.826 9.826 9.826 9.826-4.419 9.826-9.826-4.419-9.826-9.826-9.826zM40.291 46.047c-3.489 0-6.338-2.849-6.338-6.338s2.849-6.338 6.338-6.338 6.338 2.849 6.338 6.338-2.849 6.338-6.338 6.338zM52.792 29.476c0 1.279-1.046 2.268-2.268 2.268s-2.268-1.046-2.268-2.268 0.988-2.268 2.209-2.268 2.326 1.046 2.326 2.268z" fill="#000" class="icon-path-Instagram"></path>
+        </svg></div></div></a> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.1em; padding: 0.5em; color: rgb(255, 255, 255);">Instagram</div></div></div><div class="me-media-icon-box bottom" style="width: 1em; margin: 0px 0.25em 0.1em;"><div class="me-media-icon-item media-icon-Facebook"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="50" height="50" viewBox="0 0 80 80">
+        <title>Facebook</title>
+        <path d="M44.278 26.336h6.577v-7.854h-6.577c-5.044 0-9.194 4.086-9.194 9.194v3.959h-5.236v7.854h5.236v20.943h7.854v-21.007h6.577l1.341-7.854h-7.917v-3.959c0-0.702 0.575-1.277 1.341-1.277z" fill="#000" class="icon-path-Facebook"></path>
+        </svg></div></div></a> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.1em; padding: 0.5em; color: rgb(255, 255, 255);">Facebook</div></div></div><div class="me-media-icon-box bottom" style="width: 1em; margin: 0px 0.25em 0.1em;"><div class="me-media-icon-item media-icon-TikTok"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="50" height="50" viewBox="0 0 80 80">
+        <title>TikTok</title>
+        <path d="M56.397 36.63c-0.011 0-0.024 0-0.038 0-3.36 0-6.468-1.077-8.998-2.906l0.045 0.032v13.087c-0.003 6.571-5.331 11.898-11.903 11.898-6.574 0-11.903-5.328-11.903-11.903s5.328-11.903 11.903-11.903c0.577 0 1.144 0.040 1.697 0.12l-0.064-0.007v6.581c-0.49-0.16-1.054-0.252-1.639-0.252-3.018 0-5.464 2.446-5.464 5.464s2.446 5.464 5.464 5.464c3.018 0 5.464-2.446 5.464-5.464 0 0 0 0 0 0v0-25.583h6.443c0 0.022 0 0.047 0 0.073 0 0.548 0.049 1.084 0.144 1.605l-0.009-0.055c0.476 2.479 1.919 4.552 3.914 5.853l0.035 0.022c1.38 0.924 3.077 1.475 4.904 1.475 0 0 0.002 0 0.002 0v0z" fill="#000" class="icon-path-TikTok"></path>
+        </svg></div></a> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.1em; padding: 0.5em; color: rgb(255, 255, 255);">TikTok</div></div></div><div class="me-media-icon-box bottom" style="width: 1em; margin: 0px 0.25em 0.1em;"><div class="me-media-icon-item media-icon-Discord"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="50" height="50" viewBox="0 0 80 80">
+        <title>Discord</title>
+        <path d="M55.91 25.549c-3.028-1.405-6.199-2.378-9.442-2.919-0.433 0.793-0.864 1.621-1.225 2.451-3.459-0.54-7.027-0.54-10.488 0-0.36-0.83-0.757-1.658-1.225-2.451-3.279 0.54-6.451 1.55-9.478 2.919-5.946 8.865-7.568 17.479-6.776 25.984v0c3.495 2.595 7.424 4.542 11.605 5.839 0.937-1.261 1.767-2.595 2.487-4.001-1.37-0.504-2.667-1.117-3.929-1.874 0.324-0.253 0.65-0.47 0.973-0.721 7.351 3.459 15.858 3.459 23.172 0 0.324 0.253 0.648 0.504 0.973 0.721-1.261 0.721-2.558 1.37-3.929 1.874 0.721 1.405 1.55 2.739 2.487 4.001 4.181-1.261 8.108-3.244 11.605-5.803v0c0.937-9.911-1.621-18.453-6.811-26.020zM32.413 46.307c-2.271 0-4.145-2.054-4.145-4.577s1.802-4.577 4.109-4.577 4.181 2.054 4.145 4.577-1.838 4.577-4.109 4.577zM47.621 46.307c-2.271 0-4.109-2.054-4.109-4.577s1.802-4.577 4.109-4.577 4.145 2.054 4.109 4.577-1.802 4.577-4.109 4.577z" fill="#000" class="icon-path-Discord"></path>
+        </svg></div></div></a> <div class="me-media-icon-label" style="display: none;"><div style="font-size: 0.1em; padding: 0.5em; color: rgb(255, 255, 255);">Discord</div></div></div><div class="me-media-icon-box bottom" style="width: 1em; margin: 0px 0.25em 0.1em;"><div class="me-media-icon-item media-icon-HoYoLAB"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="50" height="50" viewBox="0 0 80 80">
+        </svg></div></div></a></div>
+      </div>
+      <div class="margin">
+        <div class="workshop">
+          <h2>1. Workshops & Hội Thảo</h2>
+          <span>
+            <h4>Tạo Hình Ảnh Pixel</h4>
+            <p>
+              Tham gia các buổi workshop trực tuyến hoặc tại chỗ để học cách tạo ra những tác phẩm pixel art độc đáo. 
+              Các lớp học này sẽ hướng dẫn bạn từ những bước cơ bản như thiết kế pixel đơn giản đến việc xây dựng các bức tranh phức tạp hơn.
+            </p>
+            <h4>Khám Phá Game Pixel</h4>
+            <p>
+              Tham gia các hội thảo về thiết kế game pixel, nơi bạn có thể tìm hiểu về quy trình phát triển, 
+              từ việc lập kế hoạch và thiết kế đến việc triển khai và thử nghiệm trò chơi.
+            </p>
+            <p style="padding: 0 30px;"><strong>1. Skillshare: </strong>Nền tảng này cung cấp nhiều khóa học về pixel art và phát triển game. Bạn có thể tìm các lớp học phù hợp với nhu cầu của mình.</p>
+            <div class="center">
+            <img src="https://www.classcentral.com/report/wp-content/uploads/2021/05/skillshare-top-courses.png" alt="">
+            </div>
+            <p style="padding: 0 30px;"><strong>2. Udemy: </strong>Tại đây, bạn sẽ tìm thấy các khóa học online về pixel art từ cơ bản đến nâng cao.</p>
+            <div class="center">
+            <img src="https://cdn.fordhamram.com/wp-content/uploads/Udemy-Review-for-2023-Are-Udemy-Courses-Worth-It.png" alt="" style="width: 1024px; height: 512px;">
+            </div>
+            <p style="padding: 0 30px;"><strong>3. Eventbrite: </strong>Tìm kiếm các workshop hoặc hội thảo tại địa phương hoặc trực tuyến về pixel art hoặc phát triển game.</p>
+            <div class="center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRChJ1iRiqFurMvV0GLeG8WxohaHr5Y5GD_Xw&s" alt="" style="width: 1024px; height: 512px;">
+            </div>
+          </span>
+        </div>
+        <hr>
+        <div class="challenge">
+          <h2>2. Cuộc Thi & Thử Thách</h2>
+          <span>
+            <h4>Cuộc Thi Pixel Art</h4>
+            <p>
+              Tham gia các cuộc thi vẽ pixel art để thể hiện sự sáng tạo của bạn và cạnh tranh với những nghệ sĩ khác. Các chủ đề cuộc thi thường thay đổi, giúp bạn thử thách kỹ năng và tìm kiếm cảm hứng mới.
+            </p>
+            <h4>Thử Thách Game Pixel</h4>
+            <p>
+              Tham gia vào các thử thách phát triển game pixel trong một khoảng thời gian ngắn. Đây là cơ hội tuyệt vời để bạn thử sức với việc tạo ra các trò chơi độc đáo, thậm chí có thể nhận được giải thưởng hấp dẫn.
+            </p>
+            <p style="padding: 0 30px;"><strong>1. ArtStation: </strong>Nền tảng này thường tổ chức các cuộc thi nghệ thuật, bao gồm cả pixel art.</p>
+            <div class="center">
+              <img src="https://www.polygon-academy.com/wp-content/uploads/2018/03/artstation-portfolio-social.jpg" alt="" style="width: 1024px; height: 512px;">
+            </div>
+            <p style="padding: 0 30px;"><strong>2. Itch.io: </strong>Trang web này thường có các cuộc thi game jam, nơi bạn có thể tham gia vào các thử thách phát triển game pixel.</p>
+            <div class="center">
+              <img src="https://i.pcmag.com/imagery/reviews/044PXMK6FlED1dNwOXkecXV-4.fit_lim.size_1050x591.v1597354669.jpg" alt="" style="width: 1024px;">
+            </div>
+            <p style="padding: 0 30px;"><strong>3. DeviantArt: </strong>Đây là nơi bạn có thể tham gia các cuộc thi và thử thách nghệ thuật, bao gồm pixel art.</p>
+            <div class="center">
+              <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea401ecc-5e58-401f-bb54-6a351ed9f639/d88zi3t-4ca28674-4d1c-4b33-b126-7cf452186617.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VhNDAxZWNjLTVlNTgtNDAxZi1iYjU0LTZhMzUxZWQ5ZjYzOVwvZDg4emkzdC00Y2EyODY3NC00ZDFjLTRiMzMtYjEyNi03Y2Y0NTIxODY2MTcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rTON4RKml-GobJR8PUMSNiTPrZuJVgWYWIKUtC4rAvE" alt="" style="width: 1024px; height: 512px;">
+            </div>
+          </span>
+        </div>
+        <hr>
+        <div class="exhibition">
+          <h2>3. Triển Lãm & Trưng Bày</h2>
+          <span>
+            <h4>Triển Lãm Pixel Art</h4>
+            <p>
+              Tham quan các triển lãm pixel art, nơi bạn có thể chiêm ngưỡng những tác phẩm nghệ thuật pixel từ các nghệ sĩ nổi tiếng và mới nổi. Các triển lãm này thường bao gồm cả các tác phẩm truyền thống và các dự án sáng tạo.
+            </p>
+            <h4>Trưng Bày Game Pixel</h4>
+            <p>
+              Khám phá các trưng bày game pixel, nơi bạn có thể trải nghiệm trực tiếp những trò chơi mới nhất và gặp gỡ các nhà phát triển. Đây là cơ hội tuyệt vời để tìm hiểu về các xu hướng và công nghệ mới trong ngành game.
+            </p>
+            <p style="padding: 0 30px;"><strong>1. Local Art Galleries: </strong>Kiểm tra các triển lãm địa phương qua Google hoặc các trang web sự kiện để tìm những buổi trưng bày nghệ thuật liên quan đến pixel art.</p>
+            <div class="center">
+              <img src="https://cdn.securem2.com/commonimages/pages/2022/4/art-center-gallery.jpg" alt="" style="width: 1024px;">
+            </div>
+            <p style="padding: 0 30px;"><strong>2. PAX (Penny Arcade Expo): </strong>Sự kiện này có nhiều khu vực trưng bày game indie, trong đó có cả các game pixel.</p>
+            <div class="center">
+              <img src="https://east.paxsite.com/content/dam/sitebuilder/rna/pax/east/metadata/seo/expo-hall-pax-east.jpg/_jcr_content/renditions/original.image_file.1065.599.67,0,1134,600.file/733694977/expo-hall-pax-east.jpg" alt="" style="width: 1024px;">
+            </div>
+          </span>
+        </div>
+        <hr>
+        <div class="communication">
+          <h2>4. Cộng Đồng & Kết Nối</h2>
+          <span>
+            <h4>Diễn Đàn & Nhóm Online</h4>
+            <p>
+              Tham gia vào các diễn đàn và nhóm trực tuyến về pixel art và game pixel. Đây là nơi bạn có thể chia sẻ ý tưởng, nhận phản hồi, và kết nối với những người có cùng sở thích.
+            </p>
+            <h4>Sự Kiện Gặp Gỡ</h4>
+            <p>
+              Tham dự các sự kiện gặp gỡ và giao lưu, nơi bạn có thể kết nối với các nghệ sĩ, nhà phát triển, và người yêu thích pixel art. Các sự kiện này thường bao gồm các buổi trò chuyện, bàn luận, và hoạt động giao lưu thú vị.
+            </p>
+            <p style="padding: 0 30px;"><strong>1. Reddit (r/pixelart): </strong>Một cộng đồng lớn dành riêng cho những người yêu thích pixel art.</p>
+            <div class="center">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQdKXRBWtkAf0VYUa5W0pkSgDHVmqUSKCTeQ&s" alt="" style="width: 1024px; height: 512px;">
+            </div>
+            <p style="padding: 0 30px;"><strong>2. Discord: </strong>Tìm kiếm các server Discord về pixel art hoặc phát triển game, nơi bạn có thể kết nối và chia sẻ ý tưởng.</p>
+            <div class="center">
+              <img src="https://cdn.nguyenkimmall.com/images/detailed/785/cach-su-dung-discord-thumb.jpg" alt="" style="width: 1024px;">
+            </div>
+          </span>
+        </div>
+        <hr>
+        <div class="course">
+          <h2>5. Khóa Học & Hướng Dẫn</h2>
+          <span>
+            <h4>Khóa Học Online</h4>
+            <p>
+              Đăng ký vào các khóa học online về pixel art và phát triển game pixel. Các khóa học này cung cấp hướng dẫn chi tiết và bài tập thực hành để giúp bạn cải thiện kỹ năng và khám phá khả năng sáng tạo của mình.
+            </p>
+            <h4>Video Hướng Dẫn</h4>
+            <p>
+              Xem các video hướng dẫn từ các chuyên gia trong lĩnh vực pixel art và game phát triển. Những video này thường bao gồm các mẹo, kỹ thuật, và quy trình sáng tạo để bạn có thể học hỏi và áp dụng ngay lập tức.
+            </p>
+            <p style="padding: 0 30px;"><strong>1. YouTube: </strong>Kênh như Brackeys hay Saultoons thường có các video hướng dẫn về pixel art và phát triển game.</p>
+            <div class="center">
+              <img src="https://images2.thanhnien.vn/528068263637045248/2024/4/16/ytb-17132799474591976847011.jpg" alt="" style="width: 1024px;">
+            </div>
+            <p style="padding: 0 30px;"><strong>2. Coursera: </strong>Cung cấp các khóa học về thiết kế game và nghệ thuật số, bao gồm cả pixel art.</p>
+            <div class="center">
+              <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c7/02/fd/c702fd90-2989-a2e7-ea6c-299c5f35b8a4/AppIcon-0-1x_U007epad-0-0-0-0-0-0-0-85-220-0.png/1200x630wa.png" alt="" style="width: 1024px;">
+            </div>
+          </span>
+        </div>
+        <div class="end">
+          <h2>Kết Luận</h2>
+          <span>
+            <p>Thế giới pixel không chỉ mở ra cơ hội sáng tạo vô hạn mà còn mang đến nhiều hoạt động phong phú để bạn khám phá, học hỏi và kết nối. Từ các workshop hướng dẫn tạo pixel art, các cuộc thi thử thách khả năng thiết kế, đến các triển lãm và sự kiện cộng đồng, mỗi hoạt động đều giúp bạn hiểu sâu hơn về tầm quan trọng của từng pixel trong nghệ thuật và game. Bằng cách tham gia vào các hoạt động này, bạn không chỉ nâng cao kỹ năng mà còn trở thành một phần của cộng đồng đam mê, nơi sự sáng tạo và chia sẻ là yếu tố cốt lõi. Hãy tham gia và trải nghiệm sự kỳ diệu của pixel qua từng hoạt động đầy cảm hứng này!</p>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="footer" style="background-color: #003A4D;"> 
+      <div class="footerlink1">
+        <a href="index.html" id="footer-logoback" style="font-size: 25px; margin-top: -15px;"><h4 style="color: #ffffff;">PIX<span id="purple">3L</span></h4></a>
+        <a href="#" id="footerlink-item-trans">PLUS+</a>
+        <a href="#" id="footerlink-item-trans">AD-FREE</a>
+        <a href="#" id="footerlink-item-trans">NEWSLETTER</a>
+        <a href="#" id="footerlink-item-trans">Liên Hệ</a>
+      </div>
+      <div class="allfooterlinks">
+        <div class="footerlink2">
+          <h4>Giới Thiệu</h4>
+          <a href="#">Trang Web</a>
+        </div>
+        <div class="footerlink2">
+          <h4>Hoạt Động</h4>
+          <a href="#">Sự Kiện</a>
+          <a href="#">Cập Nhật</a>
+          <a href="#">Workshop</a>
+        </div>
+        <div class="footerlink2">
+          <h4>Hỗ Trợ</h4>
+          <a href="#">Câu Hỏi</a>
+          <a href="#">Hướng dẫn</a>
+          <a href="#">Lỗi</a>
+        </div>
+      </div>
+      <div class="copyright" style="color: #fff;">
+        <span>Copyright</span>
+        <i class="fa-thin fa-copyright"></i>
+        <span>2024 Pix3l. All rights reserved.</span>
+        <a href="#">Terms and Conditions |</a>
+        <a href="#">Credits |</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+</body>
+</html>
